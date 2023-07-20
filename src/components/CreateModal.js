@@ -12,16 +12,24 @@ const CreateModal = ({priorities, statuses, createTask, setOpenModal}) => {
 
     const onCreate = () => {
         createTask(newTask)
-        setOpenModal(false)
+        setOpenModal({
+            isOpen: false,
+            mode: null,
+            data: null
+        }
+        )
         setNewTask(initialTask)
     }
 
     const onCancel = () => {
-        setOpenModal(false)
+        setOpenModal({
+            isOpen: false,
+            mode: null,
+            data: null
+        })
         setNewTask(initialTask)
     }
 
-    console.log(newTask)
 
     return (
         <div>
